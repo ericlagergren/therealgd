@@ -18,13 +18,13 @@ class LoadExampleMessages extends AbstractFixture implements DependentFixtureInt
             $this->getReference('user-zach'),
             'This is a message. There are many like it, but this one originates from a fixture.',
             '192.168.0.3',
-            $this->getReference('user-emma'),
+            $this->getReference('user-commie'),
             'Example message.'
         );
 
         /* @noinspection PhpParamsInspection */
         $thread->addReply(new MessageReply(
-             $this->getReference('user-emma'),
+             $this->getReference('user-commie'),
              'This is a reply to the message originating from a fixture.',
              '192.168.0.4',
              $thread

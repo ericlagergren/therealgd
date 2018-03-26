@@ -10,7 +10,7 @@ use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 
-class LoadExampleSubmissions extends AbstractFixture implements DependentFixtureInterface {
+class LoadShitTonOfSubmissions extends AbstractFixture implements DependentFixtureInterface {
     /**
      * {@inheritdoc}
      */
@@ -45,35 +45,18 @@ class LoadExampleSubmissions extends AbstractFixture implements DependentFixture
     }
 
     private function provideSubmissions() {
-        yield [
-            'url' => 'http://www.example.com/some/thing',
+
+        for ($i = 0; $i <= 30; ++$i) {
+          yield [
+            'url' => 'http://www.example.com/some/thing'.$i,
             'title' => 'A submission with a URL and body',
-            'body' => 'This is a body.',
+            'body' => 'This is a body.'. $i,
             'ip' => '10.0.13.12',
             'timestamp' => new \DateTime('2017-03-03 03:03'),
-            'user' => 'emma',
+            'user' => 'commie',
             'forum' => 'news',
-        ];
-
-        yield [
-            'url' => 'http://www.example.org/another/thing',
-            'title' => 'A submission with a URL',
-            'body' => null,
-            'ip' => '192.168.191.7',
-            'timestamp' => new \DateTime('2017-04-03 03:01'),
-            'user' => 'emma',
-            'forum' => 'cats',
-        ];
-
-        yield [
-            'url' => null,
-            'title' => 'Submission with a body',
-            'body' => "I'm bad at making stuff up.",
-            'ip' => '127.8.9.0',
-            'timestamp' => new \DateTime('2017-04-28 10:00'),
-            'user' => 'zach',
-            'forum' => 'cats',
-        ];
+          ];
+        }
     }
 
     /**

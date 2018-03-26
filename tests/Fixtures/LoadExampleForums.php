@@ -52,8 +52,8 @@ class LoadExampleForums extends AbstractFixture implements DependentFixtureInter
             'title' => 'Cat Memes',
             'sidebar' => 'le memes',
             'description' => 'memes',
-            'moderators' => ['emma', 'zach'],
-            'subscribers' => ['emma', 'zach', 'third'],
+            'moderators' => ['commie', 'zach'],
+            'subscribers' => ['commie', 'zach', 'third'],
             'created' => new \DateTime('2017-04-20 13:12'),
             'featured' => true,
         ];

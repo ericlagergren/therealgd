@@ -50,7 +50,7 @@ class LoadExampleComments extends AbstractFixture implements DependentFixtureInt
             'body' => "This is a comment body. It is quite neat.\n\n*markdown*",
             'submission' => 1,
             'parent' => null,
-            'user' => 'emma',
+            'user' => 'commie',
             'timestamp' => new \DateTime('2017-05-01 12:00'),
             'ip' => '8.8.4.4',
         ];
@@ -78,6 +78,6 @@ class LoadExampleComments extends AbstractFixture implements DependentFixtureInt
      * {@inheritdoc}
      */
     public function getDependencies() {
-        return [LoadExampleSubmissions::class];
+        return [LoadShitTonOfSubmissions::class];
     }
 }

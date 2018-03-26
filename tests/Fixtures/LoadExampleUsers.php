@@ -27,9 +27,9 @@ class LoadExampleUsers extends AbstractFixture {
 
     private function provideUsers() {
         yield [
-            'username' => 'emma',
+            'username' => 'commie',
             'password' => 'goodshit',
-            'email' => 'emma@example.com',
+            'email' => 'commie@example.com',
             'admin' => true,
         ];
 
