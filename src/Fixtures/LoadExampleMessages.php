@@ -39,6 +39,6 @@ class LoadExampleMessages extends AbstractFixture implements DependentFixtureInt
      * {@inheritdoc}
      */
     public function getDependencies() {
-        return [LoadExampleUsers::class];
+        return [LoadShitTonOfUsers::class];
     }
 }

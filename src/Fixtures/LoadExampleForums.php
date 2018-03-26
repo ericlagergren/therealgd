@@ -75,6 +75,6 @@ class LoadExampleForums extends AbstractFixture implements DependentFixtureInter
      * {@inheritdoc}
      */
     public function getDependencies() {
-        return [LoadExampleUsers::class];
+        return [LoadShitTonOfUsers::class];
     }
 }
